@@ -186,7 +186,7 @@ function convertStringsToNumbers(arrayOfStrings) {
 
     for (var i = 0; i < arrayOfStrings.length; i++) {
 
-        if (parseInt(arrayOfStrings[i])) {
+        if (isFinite(arrayOfStrings[i])) {
 
             result[j] = parseFloat(arrayOfStrings[i]);
             j++;
@@ -197,7 +197,7 @@ function convertStringsToNumbers(arrayOfStrings) {
 
 }
 
-console.log(convertStringsToNumbers(["1", "21", undefined, "42", "1e+3", Infinity]));
+console.log(convertStringsToNumbers(["1", "21", undefined, "42", "1e+3", Infinity, 0]));
 
 
 /* Write a function to calculate how many years there are left until retirement based on the year of birth. Retirement for men is at age of 65 and for women at age of 60. If someone is already retired, a proper message should be displayed. */
@@ -227,8 +227,19 @@ Hint: num % 100 >= 11 && num % 100 <= 13
 
 */
 
-function humanizeNumber(a) {
+function humanizeNumber(number) {
+    if (number % 100 >= 11 && number % 100 <= 13)
+        return number + "th";
 
+    switch (number % 10) {
+        case 1: return number + "st";
+        case 2: return number + "nd";
+        case 3: return number + "rd";
+    }
 
-
+    return number + "th";
 }
+
+console.log(humanizeNumber(1));
+console.log(humanizeNumber(25));
+console.log(humanizeNumber(334));
