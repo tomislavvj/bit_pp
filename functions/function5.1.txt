@@ -1,0 +1,226 @@
+//1.
+function niz(a) {
+    var min = a[0];
+    var max = a[0];
+    var indexOfmin, indexOfmax;
+    for (var i = 0; i < a.length; i++) {
+        if (min > a[i]) {
+            min = a[i];
+            indexOfmin = i;
+        }
+    }
+
+    for (var i = 0; i < a.length; i++) {
+        if (max < a[i]) {
+            max = a[i];
+            indexOfmax = i;
+        }
+    }
+    var pom = min;
+    a[indexOfmin] = a[indexOfmax];
+    a[indexOfmax] = pom;
+
+    return a;
+
+}
+console.log(niz([3, 5, 6, 1, 8, 42, 64]));
+
+//2.
+
+function niz(a) {
+    for (var i = 0; i < a.length; i++) {
+        a[i] = a[i] / 2 + 5;
+        if (a[i] === 0) {
+            a[i] = 20;
+
+        }
+
+    }
+    return a;
+}
+console.log(niz([3, 500, -10, 149, 53, 414, 1, 19, 0]))
+
+//3.
+function nesa(m, b) {
+    var c = [], d = [];
+    for (var i = 0; i < b.length; i++) {
+        if (b[i] <= 50)
+            d[i] = " and has failed";
+        else if (b[i] > 50 && b[i] < 61)
+            d[i] = 6
+        else if (b[i] > 61 && b[i] < 71)
+            d[i] = 7
+        else if (b[i] > 71 && b[i] < 81)
+            d[i] = 8
+        else if (b[i] > 81 && b[i] < 91)
+            d[i] = 9
+        else
+            d[i] = 10
+    }
+    for (var i = 0; i < m.length; i++) {
+        c[i] = m[i] + " acquired " + b[i] + " earned " + d[i];
+    }
+    return c;
+}
+console.log(nesa(["Micahel", "Anne", "Frank", "Joe", "John", "David", "Mark", "Bill"], [50, 39, 63, 72, 99, 51, 83, 59]))
+
+//4.
+
+function sort(a) {
+
+    for (var i = 0; i < a.length; i++) {
+        for (j = i; j < a.length; j++) {
+            if (a[i] > a[j]) {
+                var pom = a[i];
+                a[i] = a[j];
+                a[j] = pom;
+            }
+        }
+
+    }
+    for (i = 0; i < a.length; i++)
+        a[i] *= 2;
+
+    return a;
+} console.log(sort([13, 11, 15, 5, 6, 1, 8, 12]))
+
+//5.
+function sort(a) {
+
+    for (var i = 0; i < a.length; i++) {
+        for (var j = i; j < a.length; j++) {
+            if (a[i] < a[j]) {
+                var pom = a[i];
+                a[i] = a[j];
+                a[j] = pom;
+            }
+        }
+
+    }
+
+
+    return a;
+} console.log(sort([13, 11, 15, 5, 6, 1, 8, 12]))
+
+//6
+
+function suma(p, n) {
+    var sum = 0
+    var sumpar = 0
+    var alpha = 0
+    for (var i = 0; i <= p; i++) {
+        if (i % 2 === 0) {
+            sumpar = sumpar + i;
+        }
+    }
+    for (var i = 0; i < n; i++) {
+        if (i % 2 !== 0) {
+            sum = sum + i;
+        }
+    }
+    return (sumpar - sum) * 12.5;
+}
+console.log(suma(1000, 500))
+
+//7
+function pesa(gama) {
+    var str = ""
+    for (var i = 0; i < gama.length; i++)
+        if (typeof gama[i] !== 'number' && gama[i].length >= 2)
+            str += gama[i][0] + gama[i][1];
+
+    return str;
+}
+console.log(pesa(["M", "Anne", 12, "Steve", "Joe", "John", "David", "Mark", true, "A"]));
+
+//8.
+function string(str) {
+
+    var s = ""
+    for (var i = str.length - 1; i >= 0; i--) {
+        s = s + str[i];
+    }
+    return s;
+}
+console.log(string("Belgrade Institute of Technology"))
+
+//9.
+
+function comb() {
+    var a = []
+    for (var i = 1; i <= 7; i++) {
+        for (var j = 1; j < 7; j++) {
+            if (i !== j) {
+                a[a.length] = "(" + i + "," + j + ")"
+            }
+        }
+    }
+    return a;
+
+}
+console.log(comb());
+
+//10. 
+function prime(number) {
+    for (var i = 2; i < number / 2; i++) {
+        if (number % i === 0) {
+            return false
+        }
+    }
+    return true
+}
+console.log(prime(17))
+//11
+
+
+function string(str) {
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === " ")
+            continue;
+        if (str[i] !== str[str.length - i - 1]) {
+            return false
+        }
+    }
+    return true
+}
+console.log(string("a nut for a jar of tuna"))
+
+
+//11.
+function string(str) {
+    for (var i = 0, j = str.length; i < str.length / 2; i++ , j--) {
+        if (str[i] === " ")
+            i++;
+        if (str[j] === " ")
+            j--;
+        if (str[i] !== str[j]) {
+            return false
+        }
+    }
+    return true
+}
+console.log(string("a nut for a jar of tuna"));
+//12. 
+
+function divisor(alpha, beta) {
+    var n;
+    var max
+
+    if (alpha > beta) {
+        n = beta
+
+    } else {
+        n = alpha
+
+    }
+    for (var i = 1; i <= n; i++) {
+        if (alpha % i !== 0 || beta % i !== 0) {
+            continue
+        } else {
+            var max = i
+        }
+    }
+
+    return max
+}
+console.log(divisor(81, 9))
