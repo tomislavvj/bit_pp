@@ -61,17 +61,6 @@ console.log(rotate([1, 2, 3, 4, 5, 6], 35));
 
 
 
-
-
-
-function digits(num) {
-    var res = [];
-
-}
-
-
-
-
 var x = 123456;
 var res;
 res = String(x);
