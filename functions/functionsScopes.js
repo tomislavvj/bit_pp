@@ -1,3 +1,6 @@
+
+/* Zadatak 1. Write a function to count vowels in a provided string. Vowels are a, e, i, o, and u as well as A, E, I, O, and U. 
+ */
 "use strict"
 
 function vowels(str) {
@@ -21,8 +24,12 @@ function vowels(str) {
 }
 console.log(vowels("Danas je lep dan"));
 
+/* Zadatak 2. 
+Write a function that combines two arrays by alternatingly taking elements.
 
-
+[‘a’,’b’,’c’], [1,2,3] -> [‘a’,1,’b’,2,’c’,3]
+ */
+'use strict'
 
 function combine(arrayLetter, arrayNumber) {
     var result = [];
@@ -34,8 +41,12 @@ function combine(arrayLetter, arrayNumber) {
 }
 console.log(combine(["a", "b", "c"], [1, 2, 3]));
 
+/* Zadatak 3. 
+Write a function that rotates a list by k elements.
 
-
+For example [1,2,3,4,5,6] rotated by two becomes [3,4,5,6,1,2]
+ */
+'use strict'
 
 function rotate(array, k) {
     var newArray = [];
@@ -51,8 +62,8 @@ function rotate(array, k) {
             newArray[newArray.length] = array[i];
         }
     }
-    else{
-        newArray=array;
+    else {
+        newArray = array;
     }
     return newArray;
 }
@@ -60,8 +71,10 @@ console.log(rotate([1, 2, 3, 4, 5, 6], 35));
 
 
 
-
-
+/* Zadatak 4. 
+Write a function that takes a number and returns array of its digits.
+ */
+'use strict'
 
 
 function digits(num) {
