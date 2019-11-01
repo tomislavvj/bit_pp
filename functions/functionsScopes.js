@@ -160,17 +160,31 @@ console.log(converter(70));
   */
 
 'use strict'
-function checkIfNumber(array) {
-    var c = [];
-    for (var i = 0; i < array.length; i++) {
-        var converted = parseFloat(array[i]);
-        if (array[i] === converted && converted !== Infinity) {
-            c[c.length] = array[i];
-        }
-    }
-    return c;
+
+
+function isNumber(value) {
+    var converted = parseFloat(value);
+    var res = (value === converted && Number.isFinite(converted));
+
+    return res;
 }
 
 function maxNumber(array) {
 
+    var max = array[0];
+
+    for (i = 0; i < array.length; i++) {
+        if (isNumber(array[i]) && array[i] > max) {
+            max = array[i];
+        }
+    }
+
+    return max;
 }
+var result = [2, 8, 9, 1, undefined];
+console.log(maxNumber(result));
+
+
+/* Zadatak 8. Write a function to find the maximum and minimum elements. Function returns an array.  */
+
+
