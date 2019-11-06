@@ -139,6 +139,10 @@ var punjenePaprike = recipe("Punjene paprike", "srpska", 3, ["meso", "paprike", 
 
 
 
+
+
+
+
 function Recipe(name, typeOfCuisine, complexity, listOfIngredients, preparingTime, preparingInstruction) {
 
 

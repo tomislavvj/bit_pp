@@ -82,6 +82,7 @@ function culinaryRecipe(name, typeOfCuisine, complexity, listOfIngredients, prep
         },
         changeType: function (newType) {
             this.typeOfCuisine = newType;
+            return this.typeOfCuisine;
         },
         deleteIngredient: function (ingredient) {
             var newList = [];
@@ -91,6 +92,7 @@ function culinaryRecipe(name, typeOfCuisine, complexity, listOfIngredients, prep
                 }
             }
             this.listOfIngredients = newList;
+            return this.listOfIngredients;
         }
     }
     return recipeSpecifications;
@@ -102,7 +104,6 @@ console.log(recipeItems.necessaryIngredients());
 console.log(recipeItems.checkTime());
 console.log(recipeItems.changeType("turska"));
 console.log(recipeItems.deleteIngredient("luk"));
-
 
 
 
