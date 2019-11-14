@@ -6,7 +6,7 @@
 }
  */
 
-.gunSize {
+/* .gunSize {
   float: left;
 }
 
@@ -14,4 +14,36 @@
   width: 70%;
   margin: 0 auto;
   background-color: lightgrey;
+} */
+
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+#field {
+  height: 100%;
+  background-image: url("./field.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#player {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* .gallery1,
+.gallery2 {
+  width: 33%;
+}
+
+.selected {
+  border: 5px solid red;
+  box-sizing: border-box;
+} */

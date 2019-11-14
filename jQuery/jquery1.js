@@ -12,7 +12,7 @@ $(function() {
   console.log("Welcome");
 }); */
 
-var place = $("<div>");
+/* var place = $("<div>");
 
 var imagesArray = [];
 imagesArray.push(
@@ -37,4 +37,25 @@ for (var i = 0; i < images.length; i++) {
 
 place.addClass("divPosition");
 
-console.log(images[1]);
+console.log(images[1]); */
+
+/* $field = $("#field");
+$player = $("#player");
+
+$field.on("mousemove", function(e) {
+  $player.animate({ top: e.clientY, left: e.clientX }, 0);
+});
+ */
+/* var $selectRed = $(".selected");
+
+var $moveClass = $selectRed
+  .parent()
+  .next()
+  .children()
+  .eq(1);
+
+function changeBorder() {
+  $selectRed.removeClass("selected");
+  $moveClass.addClass("selected");
+}
+changeBorder(); */
